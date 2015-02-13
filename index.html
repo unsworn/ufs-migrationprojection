@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Projection</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="js/angular.js"></script>
+  <script src="js/papaparse.js"></script>
+  <script src="js/migrationprojection.js"></script>
+  
+</head>
+
+<body ng-app="migrationprojection">
+
+  <div id="slideshow" ng-controller="SlideshowCtrl as slideshowCtrl"> 
+    <div id="slide{{entry.Slide}}" class="oneslide" ng-repeat="entry in slideshowCtrl.entries" ng-show="slideshowCtrl.index=={{entry.Slide}}">
+
+      <div class="map-container">
+        <div class="basemap" style="background-image: url(images/{{entry.BaseMap}})"></div>
+        <!--<div ng-if="entry.TopMap"><img class="topmap" ng-src="images/{{entry.TopMap}}" alt="" /></div>-->
+      </div>
+
+      <div class="content-container">
+        <div class="circular" style="background-image: url(images/{{entry.TextBoxImage}})"></div>
+        <h1>{{entry.TitleSwedish}}</h1>
+        <p>{{entry.TextBoxSwedish}}</p>
+        <h1>{{entry.TitleEnglish}}</h1>
+        <p>{{entry.TextBoxEnglish}}</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

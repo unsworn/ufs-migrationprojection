@@ -1,0 +1,97 @@
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-Light.otf');
+   font-weight:100;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-LightItalic.otf');
+   font-weight:100;
+   font-style:italic;
+}
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-Regular.otf');
+   font-weight:400;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-RegularItalic.otf');
+   font-weight:400;
+   font-style:italic;
+}
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-Bold.otf');
+   font-weight:800;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'xxQuicksandpro';
+   src: url('fonts/QuicksandPro-BoldItalic.otf');
+   font-weight:800;
+   font-style:italic;
+}
+body {
+  font:17px/3ex xxQuicksandpro, Georgia, "Times New Roman", Times, serif;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  /*    letter-spacing:0.05em;*/
+   -webkit-font-smoothing: none;
+   -webkit-font-smoothing: antialiased; /* This makes the text crisp! */  
+  margin:0; 
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+}
+html * {
+  box-sizing:border-box;
+}
+.circular {
+  width: 400px;
+  height: 400px;
+  border-radius: 260px;
+  -webkit-border-radius: 260px;
+  background-size: 400px auto;
+}
+
+.content-container {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 400px;
+  height: 700px;
+  -webkit-animation: content-animation 1s;
+}
+.content-container h1 {
+ font-size: 3rem;
+ line-height: 3.4rem;
+}
+
+.basemap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1260px;
+
+  width: 1920px;
+  height: 1080px;
+  background: no-repeat;
+}
+
+.topmap {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.oneslide {
+ 
+}
+
+@-webkit-keyframes content-animation {
+  0%   { opacity: 0; }
+  50%   { opacity: 0; }
+  100% { opacity: 1; }
+}
